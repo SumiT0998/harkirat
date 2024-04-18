@@ -65,12 +65,43 @@
 //     displayres(result);
 // }
 
-function findsum(a, b, fntoCall) {       //this is callback function
-  let result = a + b;
-  fntoCall(result);
-}
-function displayres(data) {
-  console.log("sum of number is=>" + data);
+// function findsum(a, b, fntoCall) {
+//   //this is callback function
+//   let result = a + b;
+//   fntoCall(result);
+// }
+// function displayres(data) {
+//   console.log("sum of number is=>" + data);
+// }
+
+// findsum(12342342, 9023940, displayres); //callbacks
+
+
+
+//-->>>>>>>>>>>>.set timeout  
+
+// function geet(){
+//     console.log("hello world");
+// }
+
+// setTimeout(geet,10*1000);    //1 sec =1000 millisec
+
+// setInterval(geet,2*1000); 
+
+
+
+function arthmeetic(a,b,operation){
+    const res =operation(a,b);
+    displayres(res);
+
 }
 
-findsum(1, 90, displayres);
+function add(a,b){return a+b;}
+function sub(a,b){return a-b;}
+function displayres(data){
+    console.log("result is="+data);
+}
+
+
+arthmeetic(10,5,sub);
+

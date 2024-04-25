@@ -1,0 +1,140 @@
+pwd - print working directory
+
+ls=list directory
+ls -l =list dir with permissions
+ls -l foldername  ==list directory of a folder with their permissions
+ls -R  = list sub-directories
+ls -lt = list directories with time stamp new to old
+
+ls -m	Lists directory contents separated by a comma.
+ls -Q	Displays directory contents enclosed by quotation marks.
+ls -l	Displays files in a long-list format.
+ls -lh	Display file size in a human-readable format.
+ls -g	Omits group ownership column.
+ls -F	Adds a forward slash to directories.
+ls -i	Display inode number of files and directories.
+ls -a	Display all files including hidden files.
+ls *.	Filters files according to the file extension.
+ls -la	Displays all files and directories in long list format.
+ls -R	Display files and directories recursively.
+ls -r	Sort Files in reverse.
+ls -X	Sort files alphabetically by file extension.
+ls -tl	Display files according to file creation date and time.
+ls -n	List UIDs and GIDs.
+
+
+
+cat - to view data inside a file
+cat >> filename.txt
+data   //to add data in it
+
+mkdir -p frontend/img
+mkdir -p frontend/components
+mkdir -p frontend/data
+mkdir -p frontend/src
+
+mv -- to rename file
+
+
+rm -r folder name  --dlt that folder
+
+
+
+chmod ---change file permission  
+        modify the read,write and execute permissio file
+
+
+chmod ugo  //user group or other or you are adding or deleting permission + or -
+-r read 
+-w write
+-rw readwrie
+-rwx readwriteexecute
+
+
+chmod u+x  filename 
+6 rw 
+4 is for read 
+ 2 is for write
+ 1 is for execute
+
+d denotes directory 
+
+--u--g---o-  user group other
+
+chmod 777 file name  //it means it have all the permissions
+
+7	4(r) + 2(w) + 1(x)	rwx	read, write and execute
+6	4(r) + 2(w)	rw-	read and write
+5	4(r)        + 1(x)	r-x	read and execute
+4	4(r)	r--	read only
+3	       2(w) + 1(x)	-wx	write and execute
+2	       2(w)	-w-	write only
+1	              1(x)	--x	execute only
+0	0	---	none
+
+
+
+---------------------head and tail   -------------------------
+
+head filename.txt  gives 10 top rows of files
+tail filename.tx  gives last 10 lines from rows
+
+
+
+head -20 filename.txt ----gives top 20 lines from rows
+
+
+---------------------pipe operator for multiple command--------------------
+
+cmd1 | cmd 2
+
+tail -n +25 pipe.txt | head -n +5 
+
+
+-------------------wc--------------------------------------------
+
+word count
+ 
+ wc filename.txt
+
+1line  2words   3characters
+
+
+----------------------grep=--------------------------------
+
+grep "1" filename.txt   it will tell how many time occured
+
+grep "1" filename.txt  |  wc   it will tell all detail
+
+grep -c 1 pipe.txt    shows count of 1 occured how many times
+
+grep -h  1 pipe.txt   shows 1 occured  where   case specificly
+grep -hi 1 pipe.txt    it will show 1 occurence no matter upper case lor lower case
+
+
+grep -hir  "the word to find"  .    to find something across whole dir
+
+
+grep -hin  1 pipe.txt    ->>> shows with indexing  no matter where where one is occuring
+  -hinw   // where ever one presented  with indexing
+  -o   //only matched part one 
+  -w  //find one occurence 
+
+
+  ================grep sed awk==========================================
+
+
+
+s/pattern/replacement   sed  its a substitute command
+
+
+awk [option]  script_file
+
+
+
+
+ 
+
+
+
+

@@ -1,0 +1,36 @@
+pwd - print working directory
+
+ls=list directory
+ls -l =list dir with permissions
+ls -l foldername  ==list directory of a folder with their permissions
+ls -R  = list sub-directories
+ls -lt = list directories with time stamp new to old
+
+ls -m	Lists directory contents separated by a comma.
+ls -Q	Displays directory contents enclosed by quotation marks.
+ls -l	Displays files in a long-list format.
+ls -lh	Display file size in a human-readable format.
+ls -g	Omits group ownership column.
+ls -F	Adds a forward slash to directories.
+ls -i	Display inode number of files and directories.
+ls -a	Display all files including hidden files.
+ls *.	Filters files according to the file extension.
+ls -la	Displays all files and directories in long list format.
+ls -R	Display files and directories recursively.
+ls -r	Sort Files in reverse.
+ls -X	Sort files alphabetically by file extension.
+ls -tl	Display files according to file creation date and time.
+ls -n	List UIDs and GIDs.
+
+
+
+cat - to view data inside a file
+cat >> filename.txt
+data   //to add data in it
+
+mkdir -p frontend/img
+mkdir -p frontend/components
+mkdir -p frontend/data
+mkdir -p frontend/src
+
+mv -- to rename file

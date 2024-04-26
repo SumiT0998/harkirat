@@ -1,0 +1,18 @@
+ssh-keygenn -t rsa -b 4096 -C "sumit.bisht36@gmail.com"   // ssh authentication
+
+
+
+git branch   ///to check branch 
+
+git checkout -b feature_update_files      // for creating new branches
+
+git checkout  nameof branch   //for switching
+
+
+git diff  nameofbranch   /// to check the difference btwn main and new created branch
+
+
+
+
+git push -u origin  branchname    // to push new  branch data
+

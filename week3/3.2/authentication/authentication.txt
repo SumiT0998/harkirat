@@ -1,0 +1,10 @@
+<<------------------------------------------authentication-------------------------------------------------------->>
+          before we get into authentication 
+1.hashing   // converting normal string into giberish  one way
+
+2.encryption  // converting into giberish but its two ways
+3.json web tokens
+        first takes json data then convert into some data combination of hashing and encryption
+  
+4.local storage
+

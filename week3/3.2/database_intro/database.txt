@@ -1,0 +1,37 @@
+various types of databases
+
+graph
+vector
+sql
+nosql
+  for this class we will see nosql mongo
+
+
+  mongo lets you create databse 
+  in each database it lets you create table(collection)
+  in each tables it lets yoump json data
+  its a schemaless database
+  it scales well and better choic in many cases
+
+
+
+  const mongoose = require("mongoose");
+const { string } = require("zod");
+
+mongoose.connect(
+  "mongodb+srv://sumitbisht36:36sumitbisht@cluster1.mxstryu.mongodb.net/userapp"
+);
+
+const User = mongoose.model("Users", {
+  name: string,
+  email: string,
+  password: string,
+});
+
+const user =new User({
+    name:"sumit",
+    email:"sumit@gmail.com",
+    password:"11234567"
+})
+user.save();
+

@@ -1,0 +1,42 @@
+<html>
+  <script>
+    // function calculatesum() {
+    //   // fetching  input using getElementbyid.value
+
+    //   const a = document.getElementById("firstnum").value;
+    //   const b = document.getElementById("secondnum").value;
+
+    //   const element = document.getElementById("finalsum");
+    //   //   here putting sum inside a div finalsum
+    //   element.innerHTML = parseInt(a) + parseInt(b);
+    // }
+    // //fetch is ascyncronous call
+
+    async function calsum() {
+      const a = document.getElementById("firstnum").value;
+      const b = document.getElementById("secondnum").value;
+
+      const response = await fetch(
+        "https://sum-server.100xdevs.com/sum?a=" + a + "&b=2" + b
+      );
+      const ans = await response.text();
+      document.getElementById("finalsum").innerHTML = ans;
+    }
+  </script>
+  <body>
+    <input
+      oninput="calsum()"
+      id="firstnum"
+      type="text"
+      placeholder="first"
+    /><br /><br />
+    <input
+      oninput="calsum()"
+      id="secondnum"
+      type="text"
+      placeholder="second"
+    /><br /><br />
+    <!-- <button onclick="calculatesum()">calculate</button><br /><br /> -->
+    <div id="finalsum"></div>
+  </body>
+</html>

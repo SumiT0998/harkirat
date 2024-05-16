@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>DOM test</title>
+  </head>
+  <body>
+    <h2>javascript html dom</h2>
+    <p>finding html query selector</p>
+
+    <div>div one</div>
+    <p class="intro">para one</p>
+    <div>div two</div>
+    <p class="superheading">para two</p>
+    <div>yet another div</div>
+
+    <div id="mydiv" style="border: 1px solid black; padding: 8px">
+      <h2 class="example">A heading</h2>
+      <p class="example">a paragraph</p>
+      <p class="example">a para</p>
+    </div>
+
+    <script>
+      var paragraph = document.querySelectorAll("p.intro");
+      paragraph.forEach((paragraph) => (paragraph.style.background = "red"));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<html>
+  <script>
+    let id = 0;
+    function markDone(id) {
+      document.getElementById(id).innerHTML = "Done!";
+    }
+    function addTodo() {
+      let title = document.getElementById("title").value;
+      let description = document.getElementById("description").value;
+      console.log(title);
+      console.log(description);
+      let div1 = document.createElement("div");
+      let div2 = document.createElement("div");
+      let btn = document.createElement("button");
+      div1.innerHTML = title;
+      div2.innerHTML = description;
+      btn.innerHTML = "Mark once done";
+      btn.setAttribute("onclick", `markDone(${id})`);
+      btn.setAttribute("id", id);
+      let cont = document.getElementById("container");
+      cont.appendChild(div1);
+      cont.appendChild(div2);
+      cont.appendChild(btn);
+      id = id + 1;
+    }
+  </script>
+  <div>
+    <input id="title" type="text" placeholder="title" /><br /><br />
+    <input id="description" type="text" placeholder="description" /><br /><br />
+    <button onclick="addTodo()">Add todo</button>
+    <div id="container"></div>
+  </div>
+</html>

@@ -16,10 +16,17 @@ function App() {
 
   const [todos, Settodos] = useState([]);
 
+  async function main() {
+    useEffect(() => {
+      //useEffect
+      axios.get("https://sum-server.100xdevs.com/todos").then((res) => {
+        Settodos(res.data.todos);
+      });
+    }, []);
+  }
+
   useEffect(() => {
-    axios.get("https://sum-server.100xdevs.com/todos").then((res) => {
-      Settodos(res.data.todos);
-    });
+    main();
   }, []);
 
   return (

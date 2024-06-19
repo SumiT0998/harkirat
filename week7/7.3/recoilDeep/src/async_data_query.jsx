@@ -20,11 +20,11 @@ function App() {
 function MainApp() {
   const [networkCount, setnetworkcount] = useRecoilState(notifications);
   const total = useRecoilValue(totalnotification);
-  useEffect(() => {
-    axios.get("https://sum-server.100xdevs.com/notifications").then((res) => {
-      setnetworkcount(res.data);
-    });
-  }, []);
+  // useEffect(() => {
+  //   axios.get("https://sum-server.100xdevs.com/notifications").then((res) => {
+  //     setnetworkcount(res.data);
+  //   });
+  // }, []);
 
   return (
     <>
